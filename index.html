@@ -1,11 +1,136 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio exemple d'un étudiant en BTS SIO option SISR.">
+  <title>Alex Martin | Portfolio BTS SIO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-<h1>HELLO WORLD</h1>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="header">
+    <nav class="nav container" aria-label="Navigation principale">
+      <a class="logo" href="#accueil" aria-label="Retour à l'accueil">AM<span>.</span></a>
+      <button class="menu-button" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="menu">
+        <li><a href="#a-propos">À propos</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#parcours">Parcours</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#veille">Veille</a></li>
+        <li><a class="nav-contact" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenu">
+    <section class="hero container" id="accueil">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="status-dot"></span> Disponible pour une alternance</p>
+        <h1>Bonjour, je suis<br><span>Alex Martin.</span></h1>
+        <p class="hero-subtitle">Étudiant en BTS SIO, option SISR</p>
+        <p class="hero-text">J'administre, sécurise et supervise des infrastructures réseau. J'aime transformer un besoin concret en solution fiable, documentée et facile à maintenir.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#projets">Découvrir mes projets</a>
+          <a class="button secondary" href="#contact">Me contacter</a>
+        </div>
+        <div class="social-links" aria-label="Réseaux professionnels">
+          <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          <a href="cv-alex-martin.pdf">Télécharger mon CV ↓</a>
+        </div>
+      </div>
+
+      <div class="terminal reveal" aria-label="Présentation sous forme de terminal">
+        <div class="terminal-bar"><span></span><span></span><span></span><p>alex@portfolio:~</p></div>
+        <div class="terminal-body">
+          <p><b>$</b> whoami</p>
+          <p class="answer">Alex Martin — Technicien systèmes & réseaux</p>
+          <p><b>$</b> cat profil.txt</p>
+          <p class="answer">Formation : BTS SIO SISR<br>Localisation : Lyon, France<br>Objectif : Administrateur systèmes<br>Qualités : Curieux, rigoureux, autonome</p>
+          <p><b>$</b> status</p>
+          <p class="answer success">● Prêt à relever de nouveaux défis</p>
+          <p><b>$</b> <span class="cursor">_</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="a-propos">
+      <div class="container about-grid">
+        <div class="section-heading reveal"><p class="section-number">01.</p><h2>À propos de moi</h2></div>
+        <div class="about-content reveal">
+          <p>Actuellement en deuxième année de <strong>BTS Services Informatiques aux Organisations</strong>, option Solutions d'Infrastructure, Systèmes et Réseaux, je développe mes compétences en administration, cybersécurité et support utilisateur.</p>
+          <p>Mon objectif est de poursuivre en licence professionnelle ou en école spécialisée afin de devenir administrateur systèmes et réseaux, puis d'évoluer vers la cybersécurité.</p>
+          <div class="stats">
+            <article><strong>2</strong><span>années de formation</span></article>
+            <article><strong>8+</strong><span>projets techniques</span></article>
+            <article><strong>10</strong><span>semaines de stage</span></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="competences">
+      <div class="section-heading reveal"><p class="section-number">02.</p><h2>Mes compétences</h2><p>Les technologies et méthodes mobilisées pendant ma formation et mes projets.</p></div>
+      <div class="skills-grid">
+        <article class="skill-card reveal"><div class="skill-icon">SR</div><h3>Systèmes & réseaux</h3><p>Installation, configuration et maintien d'une infrastructure.</p><ul><li>Windows Server / Active Directory</li><li>Linux Debian / Ubuntu</li><li>VLAN, routage, DHCP, DNS</li><li>Proxmox VE / VMware</li></ul></article>
+        <article class="skill-card reveal"><div class="skill-icon">CS</div><h3>Cybersécurité</h3><p>Application de mesures de protection et analyse des risques.</p><ul><li>Pare-feu pfSense / OPNsense</li><li>VPN et segmentation réseau</li><li>Durcissement des systèmes</li><li>Sauvegarde et restauration</li></ul></article>
+        <article class="skill-card reveal"><div class="skill-icon">AU</div><h3>Automatisation</h3><p>Création de scripts pour fiabiliser les tâches répétitives.</p><ul><li>PowerShell</li><li>Bash</li><li>Git et GitHub</li><li>Documentation Markdown</li></ul></article>
+        <article class="skill-card reveal"><div class="skill-icon">SU</div><h3>Support</h3><p>Accompagnement des utilisateurs et résolution d'incidents.</p><ul><li>Diagnostic matériel et logiciel</li><li>Gestion de tickets</li><li>Prise en main à distance</li><li>Rédaction de procédures</li></ul></article>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="parcours">
+      <div class="container">
+        <div class="section-heading reveal"><p class="section-number">03.</p><h2>Mon parcours</h2></div>
+        <div class="timeline">
+          <article class="timeline-item reveal"><p class="date">2025 — 2027</p><div><h3>BTS SIO — option SISR</h3><p class="place">Lycée Exemple, Lyon</p><p>Administration de systèmes, réseaux, cybersécurité, support et gestion de projet.</p></div></article>
+          <article class="timeline-item reveal"><p class="date">Janvier — Février 2027</p><div><h3>Stage — Technicien informatique</h3><p class="place">Entreprise Exemple</p><p>Déploiement de postes, assistance utilisateurs, inventaire du parc et rédaction de procédures.</p></div></article>
+          <article class="timeline-item reveal"><p class="date">Mai — Juin 2026</p><div><h3>Stage — Support systèmes et réseaux</h3><p class="place">Collectivité Exemple</p><p>Gestion des comptes Active Directory, brassage réseau et résolution d'incidents.</p></div></article>
+          <article class="timeline-item reveal"><p class="date">2022 — 2025</p><div><h3>Baccalauréat professionnel CIEL</h3><p class="place">Lycée Exemple, Lyon</p><p>Option réseaux informatiques et systèmes communicants, mention Bien.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="projets">
+      <div class="section-heading reveal"><p class="section-number">04.</p><h2>Mes projets</h2><p>Une sélection de réalisations scolaires et personnelles.</p></div>
+      <div class="filters reveal" role="group" aria-label="Filtrer les projets">
+        <button class="filter active" data-filter="all">Tous</button>
+        <button class="filter" data-filter="reseau">Réseau</button>
+        <button class="filter" data-filter="systeme">Système</button>
+        <button class="filter" data-filter="securite">Sécurité</button>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card reveal" data-category="reseau securite"><div class="project-visual blue"><span>01</span><p>INFRASTRUCTURE</p></div><div class="project-body"><div class="tags"><span>VLAN</span><span>pfSense</span><span>Cisco</span></div><h3>Infrastructure réseau segmentée</h3><p>Conception d'un réseau d'entreprise comprenant plusieurs VLAN, du routage inter-VLAN, un pare-feu et un accès VPN.</p><div class="project-links"><a href="#">Documentation ↗</a><a href="https://github.com/" target="_blank" rel="noreferrer">Code ↗</a></div></div></article>
+        <article class="project-card reveal" data-category="systeme"><div class="project-visual purple"><span>02</span><p>ACTIVE DIRECTORY</p></div><div class="project-body"><div class="tags"><span>Windows Server</span><span>GPO</span><span>PowerShell</span></div><h3>Domaine Active Directory</h3><p>Déploiement d'un domaine, automatisation de la création des utilisateurs et application de stratégies de groupe.</p><div class="project-links"><a href="#">Documentation ↗</a><a href="https://github.com/" target="_blank" rel="noreferrer">Code ↗</a></div></div></article>
+        <article class="project-card reveal" data-category="systeme securite"><div class="project-visual green"><span>03</span><p>SUPERVISION</p></div><div class="project-body"><div class="tags"><span>Zabbix</span><span>Linux</span><span>SNMP</span></div><h3>Supervision d'infrastructure</h3><p>Mise en place d'une plateforme centralisée avec tableaux de bord, alertes et surveillance des services critiques.</p><div class="project-links"><a href="#">Documentation ↗</a><a href="https://github.com/" target="_blank" rel="noreferrer">Code ↗</a></div></div></article>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="veille">
+      <div class="container watch-grid">
+        <div class="section-heading reveal"><p class="section-number">05.</p><h2>Veille technologique</h2><p>Comment l'intelligence artificielle transforme-t-elle la détection et la réponse aux cyberattaques ?</p></div>
+        <div class="watch-card reveal"><p class="eyebrow">SUJET 2026 — 2027</p><h3>L'IA au service de la cybersécurité</h3><p>Je suis les évolutions des solutions de détection assistées par IA, mais aussi les nouvelles attaques qui exploitent les modèles génératifs.</p><div class="tags"><span>ANSSI</span><span>CERT-FR</span><span>Zataz</span><span>Google Alerts</span></div><a class="text-link" href="#">Consulter ma veille complète →</a></div>
+      </div>
+    </section>
+
+    <section class="section contact container" id="contact">
+      <div class="contact-box reveal">
+        <p class="section-number">06.</p><h2>Travaillons ensemble.</h2>
+        <p>Une question, une opportunité de stage ou d'alternance ? Je serai ravi d'échanger avec vous.</p>
+        <a class="button primary" href="mailto:alex.martin@example.com">alex.martin@example.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container"><p>Conçu et développé par Alex Martin.</p><p>© <span id="year"></span> — Portfolio BTS SIO</p></div></footer>
 </body>
 </html>
